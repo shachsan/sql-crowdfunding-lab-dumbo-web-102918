@@ -17,7 +17,7 @@ JOIN pledges ON users.id = pledges.user_id GROUP BY users.name ORDER BY users.na
 end
 
 def selects_the_titles_and_amount_over_goal_of_all_projects_that_have_met_their_funding_goal
-"SELECT projects.title, SUM(pledges.amount) FROM projects WHERE projects.funding_goal>= SUM()
+"SELECT projects.title, SUM(pledges.amount) FROM projects WHERE projects.funding_goal>= SUM(pledges.am)
 JOIN pledges ON projects.id = pledges.project_id HAVING "
 end
 
